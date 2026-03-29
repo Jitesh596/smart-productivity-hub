@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Poppins;
+  background: linear-gradient(135deg,#1d2671,#c33764);
+  color: white;
+}
+
+.light {
+  background: #f4f4f4;
+  color: black;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgba(0,0,0,0.5);
+}
+
+nav a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+  padding: 30px;
+}
+
+/* GLASS */
+.glass {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* INPUT */
+input, select, textarea {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+}
