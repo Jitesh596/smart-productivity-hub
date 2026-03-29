@@ -43,3 +43,47 @@ input, select, textarea {
   border-radius: 8px;
   border: none;
 }
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #00c6ff;
+  cursor: pointer;
+}
+
+/* EVENTS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  position: relative;
+}
+
+.dlt {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* TODO */
+#taskList li {
+  background: rgba(255,255,255,0.1);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .cards{
+    flex-direction: column;
+  }
+}
