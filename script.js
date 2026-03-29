@@ -54,3 +54,48 @@ function createCard(e){
 
   document.querySelector(".cards").appendChild(div);
 }
+
+events.forEach(createCard);
+
+document.querySelector(".form").addEventListener("submit",(e)=>{
+  e.preventDefault();
+
+  let obj = {
+    title:eventTitle.value,
+    date:eventDate.value,
+    desc:description.value
+  };
+
+  events.push(obj);
+  saveEvents();
+  createCard(obj);
+});
+
+/* SEARCH */
+document.getElementById("searchEvent").oninput = function(){
+  let val = this.value.toLowerCase();
+  document.querySelectorAll(".card").forEach(c=>{
+    c.style.display = c.innerText.toLowerCase().includes(val) ? "block":"none";
+  });
+};
+
+/* CLEAR */
+document.querySelector(".clearall").onclick=()=>{
+  localStorage.removeItem("events");
+  document.querySelector(".cards").innerHTML="";
+};
+
+/* TODO */
+document.getElementById("todoForm").addEventListener("submit",(e)=>{
+  e.preventDefault();
+
+  let task = taskInput.value;
+
+  let li = document.createElement("li");
+  li.innerHTML = `${task} <button>Delete</button>`;
+
+  li.querySelector("button").onclick=()=>li.remove();
+
+  taskList.appendChild(li);
+  taskInput.value="";
+});
