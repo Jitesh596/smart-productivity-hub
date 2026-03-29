@@ -53,10 +53,3 @@ function addEvent() {
   document.getElementById("eventName").value = "";
 }
 
-// Show event
-function showEvent(name) {
-  let div = document.createElement("div");
-  div.innerText = name;
-
-  document.getElementById("eventList").appendChild(div);
-}
