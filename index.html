@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Smart Hub</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#weather">Weather</a></li>
+    <li><a href="#events">Events</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section">
+  <h1>Welcome to Smart Hub 🚀</h1>
+  <p>Your Weather + Event Manager</p>
+</section>
+
+<!-- WEATHER -->
+<section id="weather" class="section">
+  <h2>🌦 Weather Tracker</h2>
+
+  <input type="text" id="city" placeholder="Enter city">
+  <button onclick="getWeather()">Search</button>
+
+  <div id="weatherResult" class="card"></div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="section">
+  <h2>🎉 Event Dashboard</h2>
+
+  <input type="text" id="eventName" placeholder="Event name">
+  <button onclick="addEvent()">Add Event</button>
+
+  <div id="eventList"></div>
+</section>
+
+<footer>
+  <p>© 2026 Smart Hub</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
