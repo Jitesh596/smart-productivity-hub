@@ -95,7 +95,3 @@ document.getElementById("todoForm").addEventListener("submit",(e)=>{
   li.innerHTML = `${task} <button>Delete</button>`;
 
   li.querySelector("button").onclick=()=>li.remove();
-
-  taskList.appendChild(li);
-  taskInput.value="";
-});
